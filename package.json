@@ -67,7 +67,7 @@
         "test-debug": "mocha --nolazy --inspect-brk=3001  ./test/unit/*.js",
         "acceptances": "mocha --timeout 15000 ./test/acceptances/*.js --require esm --exit",
         "acceptances-debug": "mocha --timeout 15000 --nolazy --inspect-brk=3001 ./test/acceptances/*.js --require esm --exit",
-        "coverage": "nyc --require esm mocha ./test/**/*.js",
+        "coverage": "nyc --reporter=html --require esm mocha ./test/**/*.js --exit",
         "watch": "nodemon -r esm src/index.js --config nodemon.json",
         "lint": "eslint --ext .js src/ && eslint --ext .js test/",
         "lint:fix": "eslint --fix src/ && eslint --fix test/",
