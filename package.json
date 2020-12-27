@@ -19,7 +19,8 @@
         "eslint-plugin-promise": "^4.2.1",
         "eslint-plugin-standard": "^4.0.1",
         "nodemon": "^2.0.6",
-        "pre-commit": "^1.2.2"
+        "pre-commit": "^1.2.2",
+        "nyc": "^15.1.0"
     },
     "dependencies": {
         "@babel/cli": "^7.12.1",
@@ -47,8 +48,6 @@
         "moment": "^2.29.1",
         "mongoose": "5.10.3",
         "npm-run-all": "^4.1.5",
-        "nsp": "^3.2.1",
-        "nyc": "^15.1.0",
         "redis": "^3.0.2",
         "request": "^2.88.0",
         "rewire": "^5.0.0",
@@ -66,8 +65,8 @@
         "debug": "node --nolazy --inspect-brk=3001 -r esm src/index.js",
         "test": "mocha ./test/unit/*.js",
         "test-debug": "mocha --nolazy --inspect-brk=3001  ./test/unit/*.js",
-        "acceptances": "mocha --timeout 15000 ./test/acceptances/*.js --require esm ",
-        "acceptances-debug": "mocha --timeout 15000 --nolazy --inspect-brk=3001 ./test/acceptances/*.js --require esm",
+        "acceptances": "mocha --timeout 15000 ./test/acceptances/*.js --require esm --exit",
+        "acceptances-debug": "mocha --timeout 15000 --nolazy --inspect-brk=3001 ./test/acceptances/*.js --require esm --exit",
         "coverage": "nyc --require esm mocha ./test/**/*.js",
         "watch": "nodemon -r esm src/index.js --config nodemon.json",
         "lint": "eslint --ext .js src/ && eslint --ext .js test/",
