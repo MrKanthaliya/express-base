@@ -1,0 +1,20 @@
+{
+  "invalidTransport": {
+    "config": {},
+    "options": {
+      "filename": "logs/filelog-error.log",
+      "handleExceptions": true,
+      "level": "error",
+      "name": "error-file"
+    }
+  },
+  "consoleTransport": {
+      "config": {
+        "type": "transports.Console"
+      },
+      "options": {
+        "level": "debug",
+        "colorize": true
+      }
+  }
+}

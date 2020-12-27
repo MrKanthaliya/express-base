@@ -1,0 +1,30 @@
+{
+    "api": {
+        "protocol": "https",
+        "domain": "localhost",
+        "port": 8080,
+        "baseUrl": "/api/v1",
+        "version": "0.0.1",
+        "routesFolder": "./src/routes",
+        "name": "Express base"
+    },
+    "logger": {
+        "transports": [
+            {
+                "config": {
+                    "type": "transports.Console"
+                },
+                "options": {
+                    "level": "debug",
+                    "colorize": true
+                }
+            }
+        ]
+    },
+    "test": {
+        "reports": {
+            "url": "/coverage",
+            "path": "./coverage/lcov-report"
+        }
+    }
+}
