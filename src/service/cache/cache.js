@@ -150,14 +150,6 @@ class RedisClient {
     }
 
     async cache(lala) {
-    // const key = { segment: lala.segment, id: typeof lala.data === 'string' ? lala.data : lala.data.id };
-    // const result = await this.get(key);
-    // if (!_.isNil(result)) {
-    //   return result;
-    // }
-
-        // const response = await lala.generateFunc(lala.data);
-        // this.set(key, response);
         this.data = lala;
         return this;
     }
