@@ -24,6 +24,9 @@ class RedisClient {
             port: process.env.REDIS_PORT,
             // retry_strategy: () => 1000,
         });
+        client.on('error', function (error) {
+            logger.error("redis server issue", error)
+        });
         client.get = promisify(client.get);
         client.smembers = promisify(client.smembers);
         this.client = client;

@@ -15,13 +15,13 @@ export const initializeServerBase = async(app) => {
         const redisCache = new CacheService();
         const redisClient = await redisCache.init();
         logger.info('Redis Cache initiated');
-        const ChatGlobals = {
+        const ExpressGlobals = {
             cache: redisCache,
             redis_client: redisClient,
         };
-        Object.freeze(ChatGlobals);
+        Object.freeze(ExpressGlobals);
 
-        global.ChatGlobals = ChatGlobals;
+        global.ExpressGlobals = ExpressGlobals;
 
         const mongo = await connectToDB();
         logger.info('Database connected');
